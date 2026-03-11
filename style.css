@@ -17,7 +17,9 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 
-background:black;
+background-image:url("images/title-background.png");
+background-size:cover;
+background-position:center;
 
 }
 
@@ -25,6 +27,7 @@ background:black;
 
 font-size:70px;
 color:gold;
+text-shadow:3px 3px 8px black;
 
 }
 
@@ -41,7 +44,7 @@ cursor:pointer;
 
 }
 
-/* INSTRUCTIONS */
+/* INSTRUCTIONS SCREEN */
 
 #instructionScreen{
 
@@ -49,7 +52,9 @@ display:none;
 
 min-height:100vh;
 
-background:black;
+background-image:url("images/diner-background2.png");
+background-size:cover;
+background-position:center;
 
 flex-direction:column;
 justify-content:center;
@@ -93,7 +98,9 @@ display:none;
 
 min-height:100vh;
 
-background:black;
+background-image:url("images/diner-background2.png");
+background-size:cover;
+background-position:center;
 
 flex-direction:column;
 align-items:center;
@@ -101,6 +108,8 @@ align-items:center;
 position:relative;
 
 }
+
+/* GAME AREA */
 
 #gameArea{
 
@@ -148,10 +157,11 @@ animation:walkIn 1.6s forwards;
 
 font-size:22px;
 margin-top:-10px;
+text-shadow:2px 2px 6px black;
 
 }
 
-/* ORDER */
+/* ORDER BUBBLE */
 
 #orderBubble{
 
@@ -203,5 +213,6 @@ cursor:pointer;
 margin-top:20px;
 
 font-size:26px;
+text-shadow:2px 2px 6px black;
 
 }
