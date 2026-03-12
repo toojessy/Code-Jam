@@ -107,6 +107,7 @@ align-items:center;
 
 position:relative;
 
+
 }
 
 /* GAME AREA */
@@ -119,6 +120,8 @@ width:100%;
 height:65vh;
 
 overflow:hidden;
+
+margin-top:40px;
 
 }
 
@@ -146,8 +149,14 @@ animation:walkIn 1.6s forwards;
 
 @keyframes walkIn{
 
-0%{left:-500px;}
-100%{left:120px;}
+0%{
+left:-500px;
+}
+
+100%{
+left:50%;
+transform:translateX(-50%);
+}
 
 }
 
@@ -155,9 +164,26 @@ animation:walkIn 1.6s forwards;
 
 #characterName{
 
-font-size:22px;
-margin-top:-10px;
+position:absolute;
+
+bottom:85vh;
+left:50%;
+
+transform:translateX(-50%);
+
+font-size:34px;
+font-weight:bold;
+
+color:white;
+
+padding:8px 18px;
+
+background:rgba(0,0,0,0.65);
+border-radius:10px;
+
 text-shadow:2px 2px 6px black;
+
+z-index:5;
 
 }
 
