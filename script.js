@@ -1,4 +1,5 @@
 window.onload = function () {
+
     const titleScreen = document.getElementById("titleScreen");
     const instructionScreen = document.getElementById("instructionScreen");
     const gameScreen = document.getElementById("gameScreen");
@@ -15,6 +16,14 @@ window.onload = function () {
     const rejectBtn = document.getElementById("rejectBtn");
 
     const streakText = document.getElementById("streak");
+
+    const menuContainer = document.getElementById("menuContainer");
+    const menuToggle = document.getElementById("menuToggle");
+    const collapsibleMenu = document.getElementById("collapsibleMenu");
+
+    menuToggle.onclick = function () {
+        collapsibleMenu.classList.toggle("hidden");
+    };
 
     const realCustomers = [
         { image: "customer1.png", name: "ZingZingZingbah" },
@@ -70,11 +79,15 @@ window.onload = function () {
     startBtn.onclick = function () {
         titleScreen.style.display = "none";
         instructionScreen.style.display = "flex";
+        gameScreen.style.display = "none";
+        menuContainer.style.display = "none";
     };
 
     instructionBtn.onclick = function () {
         instructionScreen.style.display = "none";
         gameScreen.style.display = "flex";
+        menuContainer.style.display = "block";
+        collapsibleMenu.classList.add("hidden");
 
         score = 0;
         streak = 0;
@@ -194,8 +207,6 @@ window.onload = function () {
                 flex-direction:column;
                 justify-content:center;
                 align-items:center;
-                background-size:cover;
-                background-position:center;
                 text-align:center;
                 padding:30px;
                 box-sizing:border-box;
@@ -255,8 +266,12 @@ window.onload = function () {
             </div>
         `;
 
+        menuContainer.style.display = "none";
+
         document.getElementById("restartBtn").onclick = function () {
             location.reload();
         };
     }
+
+    menuContainer.style.display = "none";
 };
